@@ -1,1 +1,101 @@
-
+movie_id,title,genres
+1,Sholay,Action Adventure Comedy Drama
+2,Dilwale Dulhania Le Jayenge,Romance Drama Musical
+3,Baahubali: The Beginning,Action Adventure Fantasy
+4,3 Idiots,Comedy Drama
+5,Dangal,Action Biography Drama Sport
+6,Lagaan,Drama Musical Sport
+7,Vikram Vedha,Action Crime Thriller
+8,Super Deluxe,Crime Drama Thriller
+9,Drishyam,Crime Drama Mystery Thriller
+10,RRR,Action Adventure Drama
+11,K.G.F: Chapter 1,Action Crime Drama
+12,Gangs of Wasseypur,Action Comedy Crime Drama
+13,Zindagi Na Milegi Dobara,Comedy Drama Romance
+14,Andhadhun,Comedy Crime Music Thriller
+15,Tumbbad,Fantasy Horror Mystery
+16,Queen,Adventure Comedy Drama
+17,Mughal-E-Azam,Drama Romance War
+18,Pather Panchali,Drama
+19,Mother India,Drama
+20,Dil Chahta Hai,Comedy Drama Romance
+21,Rang De Basanti,Comedy Crime Drama
+22,Taare Zameen Par,Drama Family
+23,Chak De! India,Drama Sport
+24,Swades,Drama
+25,Hera Pheri,Action Comedy Crime
+26,Munna Bhai M.B.B.S.,Comedy Drama
+27,Jab We Met,Comedy Romance
+28,Gully Boy,Drama Music
+29,Bajrangi Bhaijaan,Action Adventure Comedy
+30,PK,Comedy Drama Sci-Fi
+31,Pushpa: The Rise,Action Crime Drama
+32,Kantara,Action Adventure Drama
+33,Sita Ramam,Drama Romance War
+34,Jersey,Drama Sport
+35,Lucia,Drama Mystery Sci-Fi Thriller
+36,Bangalore Days,Comedy Drama Romance
+37,Premam,Comedy Drama Romance
+38,Sairat,Action Drama Romance
+39,Thalaivii,Biography Drama
+40,Sardar Udham,Biography Crime Drama
+41,The Lunchbox,Drama Romance
+42,Masaan,Drama
+43,Haider,Action Crime Drama Thriller
+44,Barfi!,Comedy Drama Romance
+45,Article 15,Crime Drama Mystery
+46,Piku,Comedy Drama
+47,Pink,Drama Thriller
+48,Udaan,Drama
+49,Wake Up Sid,Comedy Drama Romance
+50,Rockstar,Drama Music Romance
+51,Tamasha,Comedy Drama Romance
+52,Kai Po Che!,Drama Sport
+53,Special 26,Action Crime Drama Thriller
+54,A Wednesday,Action Crime Drama Thriller
+55,Aamir,Crime Drama Thriller
+56,Dev.D,Comedy Drama Romance
+57,Black,Drama
+58,Guzaarish,Drama Romance
+59,Pyaasa,Drama Musical Romance
+60,Guide,Drama Musical Romance
+61,Anand,Drama
+62,Gol Maal,Comedy Romance
+63,Satya,Action Crime Drama
+64,Company,Action Crime Drama
+65,Don,Action Crime Thriller
+66,Agneepath,Action Crime Drama
+67,Kahaani,Mystery Thriller
+68,Talvar,Crime Drama Mystery
+69,Baby,Action Crime Thriller
+70,Uri: The Surgical Strike,Action Drama War
+71,Raazi,Action Drama Thriller
+72,Newton,Comedy Drama
+73,Stree,Comedy Horror
+74,Go Goa Gone,Action Comedy Horror
+75,Bhool Bhulaiyaa,Comedy Horror Mystery
+76,Padmaavat,Drama History Romance
+77,Bajirao Mastani,Drama History Romance
+78,Jodhaa Akbar,Drama History Romance
+79,Devdas,Drama Romance Musical
+80,Hum Aapke Hain Koun...!,Comedy Drama Musical
+81,Kuch Kuch Hota Hai,Comedy Drama Romance
+82,Kal Ho Naa Ho,Comedy Drama Romance
+83,Main Hoon Na,Action Comedy Drama
+84,Om Shanti Om,Action Comedy Drama Musical
+85,Dhoom 2,Action Crime Thriller
+86,Krrish,Action Adventure Sci-Fi
+87,Robot (Enthiran),Action Adventure Sci-Fi
+88,Sivaji: The Boss,Action Drama Thriller
+89,Nayagan,Crime Drama
+90,Roja,Drama Romance Thriller
+91,Bombay,Drama Romance War
+92,Iruvar,Drama
+93,Asuran,Action Drama
+94,Jai Bhim,Crime Drama
+95,Soorarai Pottru,Action Biography Drama
+96,Kumbalangi Nights,Comedy Drama Romance
+97,The Great Indian Kitchen,Drama
+98,Jallikattu,Action Crime Drama
+99,96,Drama Romance
+100,Vada Chennai,Action Crime Drama
