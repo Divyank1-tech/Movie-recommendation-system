@@ -141,13 +141,6 @@ Genres  : Action Biography Drama Sport
 - Build a web UI using Flask or Streamlit
 - Add collaborative filtering based on user ratings
 
----
-
-## 📝 License
-
-This project is open-source and free to use under the [MIT License](LICENSE).
-
----
 
 ## 🙌 Acknowledgements
 
