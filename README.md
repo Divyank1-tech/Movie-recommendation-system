@@ -17,4 +17,4 @@ A robust AI-based recommendation engine developed for the Build Your Own Project
 
 1. **Clone the repository:**
    ```bash
-   gh repo clone Divyank1-tech/Movie-recommendation-system
+   git clone https://github.com/Divyank1-tech/Movie-recommendation-system.git
