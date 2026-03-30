@@ -1,14 +1,14 @@
 # 🎬 Movie Recommendation System
 
-A content-based movie recommendation engine built with Python. It uses **TF-IDF vectorization** and **cosine similarity** to suggest movies similar to one you already like — based on genres, plot, cast, and other metadata.
+A content-based movie recommendation engine built with Python, focused on **Indian cinema** (Bollywood & South Indian films). It uses **TF-IDF vectorization** and **cosine similarity** on genre metadata to suggest movies similar to one you already like.
 
 ---
 
 ## 📌 Features
 
-- Content-based filtering using movie metadata
+- Content-based filtering using genre metadata
 - Flexible title matching — exact, substring, and fuzzy search
-- Works with any CSV dataset that has a `title` and `genres` column
+- Dataset of **100 popular Indian movies** across genres
 - Displays top 5 similar movie recommendations
 - Supports both CLI argument and interactive input modes
 
@@ -20,7 +20,7 @@ A content-based movie recommendation engine built with Python. It uses **TF-IDF 
 movie-recommendation-system/
 │
 ├── main.py          # Core recommendation logic and CLI interface
-├── movies.csv       # Movie dataset (you provide this)
+├── movies.csv       # 100 Indian movies with genre metadata
 └── README.md
 ```
 
@@ -40,28 +40,27 @@ pip install pandas scikit-learn
 
 ---
 
-## 📊 Dataset Format
+## 📊 Dataset
 
-Your `movies.csv` must include at minimum:
+The included `movies.csv` contains **100 popular Indian movies** with the following columns:
 
-| Column   | Required | Description                        |
-|----------|----------|------------------------------------|
-| `title`  | ✅ Yes   | Movie name (also accepts `name`, `film`, `movie_title`, etc.) |
-| `genres` | ✅ Yes   | Genre(s) of the movie              |
+| Column     | Description                                      |
+|------------|--------------------------------------------------|
+| `movie_id` | Unique identifier for each movie                 |
+| `title`    | Movie name                                       |
+| `genres`   | Space-separated genre tags (e.g. `Action Drama`) |
 
-The following columns are **optional but improve recommendations**:
+### Sample Data
 
-| Column       | Description                  |
-|--------------|------------------------------|
-| `plot`       | Movie plot / description     |
-| `overview`   | Short summary                |
-| `tagline`    | Movie tagline                |
-| `keywords`   | Associated keywords          |
-| `actors`     | Actor names                  |
-| `stars`      | Lead stars                   |
-| `writer`     | Screenwriter(s)              |
-| `director`   | Director name (shown in output) |
-| `cast`       | Full cast (shown in output)  |
+| movie_id | title                          | genres                        |
+|----------|--------------------------------|-------------------------------|
+| 1        | Sholay                         | Action Adventure Comedy Drama |
+| 2        | Dilwale Dulhania Le Jayenge    | Romance Drama Musical         |
+| 3        | Baahubali: The Beginning       | Action Adventure Fantasy      |
+| 4        | 3 Idiots                       | Comedy Drama                  |
+| 5        | Dangal                         | Action Biography Drama Sport  |
+
+> **Note:** Recommendations are based purely on genre similarity. Movies sharing more genre tags will rank higher as similar matches.
 
 ---
 
@@ -89,10 +88,10 @@ Enter a movie you liked (e.g., Sholay, RRR, Drishyam): Sholay
 python main.py Sholay
 ```
 
-or for multi-word titles:
+For multi-word titles:
 
 ```bash
-python main.py The Dark Knight
+python main.py Dilwale Dulhania Le Jayenge
 ```
 
 ---
@@ -102,13 +101,14 @@ python main.py The Dark Knight
 ```
 Since you liked 'Sholay', you might enjoy these:
 
-Title   : Deewar
-Genres  : Action, Drama
-Director: Yash Chopra
+Title   : RRR
+Genres  : Action Adventure Drama
 ----------------------------------------
-Title   : Don
-Genres  : Action, Crime, Thriller
-Director: Chandra Barot
+Title   : Baahubali: The Beginning
+Genres  : Action Adventure Fantasy
+----------------------------------------
+Title   : Dangal
+Genres  : Action Biography Drama Sport
 ----------------------------------------
 ...
 ========================================
@@ -118,11 +118,11 @@ Director: Chandra Barot
 
 ## 🔍 How It Works
 
-1. **Metadata Aggregation** — Combines available text fields (`genres`, `plot`, `actors`, etc.) into a single metadata string per movie.
-2. **TF-IDF Vectorization** — Converts metadata into numerical feature vectors, down-weighting common words.
-3. **Cosine Similarity** — Measures how similar each movie is to the queried one based on their vectors.
+1. **Metadata Aggregation** — Uses the `genres` column as the primary text signal for each movie.
+2. **TF-IDF Vectorization** — Converts genre tags into numerical feature vectors, down-weighting very common genre words.
+3. **Cosine Similarity** — Measures how similar each movie is to the queried one based on their genre vectors.
 4. **Title Matching** — Tries exact → substring → fuzzy matching to handle typos and partial titles.
-5. **Top-5 Results** — Returns the 5 most similar movies, excluding the queried movie itself.
+5. **Top-5 Results** — Returns the 5 most genre-similar movies, excluding the queried movie itself.
 
 ---
 
@@ -130,7 +130,16 @@ Director: Chandra Barot
 
 - **Change number of recommendations** — Edit `sim_scores[1:6]` in `get_recommendations()` (e.g., `[1:11]` for top 10).
 - **Adjust fuzzy match sensitivity** — Modify the `cutoff` parameter in `difflib.get_close_matches()` (default: `0.6`).
-- **Add more metadata fields** — Extend the `metadata_fields` list with any additional columns in your CSV.
+- **Improve recommendation quality** — Add more columns to `movies.csv` such as `plot`, `director`, `cast`, or `keywords`. The system will automatically pick them up and use them for richer matching.
+
+---
+
+## 🔮 Possible Improvements
+
+- Add `plot`, `cast`, and `director` columns to `movies.csv` for deeper content-based filtering
+- Expand the dataset beyond 100 movies
+- Build a web UI using Flask or Streamlit
+- Add collaborative filtering based on user ratings
 
 ---
 
@@ -144,4 +153,4 @@ This project is open-source and free to use under the [MIT License](LICENSE).
 
 - [scikit-learn](https://scikit-learn.org/) for TF-IDF and cosine similarity
 - [pandas](https://pandas.pydata.org/) for data handling
-- Inspired by classic collaborative and content-based filtering techniques
+- Dataset: 100 popular Indian (Bollywood & South Indian) movies
